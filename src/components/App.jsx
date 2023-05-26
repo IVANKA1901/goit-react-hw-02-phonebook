@@ -24,7 +24,7 @@ export class App extends Component {
 
   addContact = ({ name, number }) => {
     // console.log(contact);
-    const contact = { name, number, id: nanoid() };
+    const newContact = { name, number, id: nanoid() };
     const { contacts } = this.state;
 
     if (
@@ -39,7 +39,7 @@ export class App extends Component {
       alert('Please enter the contact`s name and phone number');
     } else {
       this.setState(prevState => ({
-        contacts: [...prevState.contacts, contact],
+        contacts: [...prevState.contacts, newContact],
       }));
     }
   };

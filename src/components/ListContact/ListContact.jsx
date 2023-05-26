@@ -6,7 +6,6 @@ export function ListContact({ contacts, onDeleteContact }) {
     <ul className={css.list}>
       {contacts.map(({ id, number, name }) => (
         <li key={id} className={css.item}>
-          {id}
           <p>
             {name}: {number}
           </p>
