@@ -19,10 +19,9 @@ export class FormContacts extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit(this.state);
-
     this.setState({
       name: '',
-      value: '',
+      number: '',
       id: nanoid(),
     });
   };
